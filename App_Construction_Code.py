@@ -7,17 +7,10 @@ import joblib
 from io import BytesIO
 
 # Constants
-TEMPLATE_PATH = "Template.xlsx"
-UPLOAD_SIZE_LIMIT_MB = 5120  # 5 Go = 5120 Mo
-
-# Set the working directory to the specified path
-os.chdir("C:\\Users\\Fateh-Nassim MELZI\\Documents\\AI_Projects\\Metal_Parts_Price_Prediction_Project\\App_Construction")
+TEMPLATE_PATH = "./Template.xlsx"
 
 # Set page configuration
 st.set_page_config(page_title="Metal Parts Price Prediction", page_icon="🛠️", layout="centered")
-
-# Set max upload size
-os.environ['STREAMLIT_SERVER_MAX_UPLOAD_SIZE'] = str(UPLOAD_SIZE_LIMIT_MB)
 
 # Cache the model loading function to avoid reloading on every interaction
 @st.cache_resource
